@@ -1,0 +1,17 @@
+{
+  "name": "my-first-react-native-app",
+  "displayName": "my-first-react-native-app",
+  "expo": {
+    "name": "my-first-react-native-app",
+    "slug": "my-first-react-native-app",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
