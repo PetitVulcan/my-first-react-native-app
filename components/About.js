@@ -1,18 +1,28 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button, Image } from 'react-native';
 
 
+export default class About extends React.Component {
 
-export default class About extends React.Component{
-    render(){
+    render() {
         return (
             <View>
-                <Text style={styles.welcome}>A propos de l'application</Text>
-                <Text style={styles.instructions}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a turpis semper ipsum aliquet euismod</Text>
-                <Text style={styles.instructions}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a turpis semper ipsum aliquet euismod</Text>
+                <Image
+                    source={{
+                        uri: 'https://reactnative.dev/img/tiny_logo.png',
+                    }}
+                />
+                <Text style={styles.welcome}>A propos de AppMeteo</Text>
+                <Text style={styles.instructions}>AppMeteo est une application React Native développée par PetitVulcan</Text>
+                <Text style={styles.instructions}>Téléchargez d'autres applications sur www.petitvulcan.com</Text>
+                <Button
+                    title='petitvulcan.com'
+                    color='#EB6123'
+                    onPress={() => console.log(this.props.navigation)}
+                />
             </View>
         );
-    }    
+    }
 }
 
 const styles = StyleSheet.create({

@@ -2,6 +2,7 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import About from './components/About';
+import Meteo from './components/Meteo';
 import Search from './components/Search';
 import Home from './components/Home';
 import { NavigationContainer } from '@react-navigation/native';
@@ -22,7 +23,13 @@ function AboutScreen() {
         </View>
     );
 }
-
+function MeteoScreen() {
+    return (
+        <View style={styles.container}>
+            <Meteo />
+        </View>
+    );
+}
 function SearchScreen() {
     return (
         <View style={styles.container}>
@@ -37,8 +44,10 @@ function MyTabs() {
     return (
         <Tab.Navigator
             initialRouteName="Home"
-            activeColor="#e91e63"
-            style={styles.navigator}>
+            shifting="true"
+            activeColor="#f0edf6"
+            inactiveColor="#464646"
+            barStyle={{ backgroundColor: '#EB6123' }}>
             <Tab.Screen
                 name="Home"
                 component={HomeScreen}
@@ -46,6 +55,16 @@ function MyTabs() {
                     tabBarLabel: 'Home',
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="home" color={color} size={26} />
+                    ),
+                }}
+            />
+            <Tab.Screen
+                name="Meteo"
+                component={MeteoScreen}
+                options={{
+                    tabBarLabel: 'Météo',
+                    tabBarIcon: ({ color }) => (
+                        <MaterialCommunityIcons name="weather-partly-cloudy" color={color} size={26} />
                     ),
                 }}
             />
@@ -58,7 +77,7 @@ function MyTabs() {
                         <MaterialCommunityIcons name="magnify" color={color} size={26} />
                     ),
                 }}
-            />
+            />            
             <Tab.Screen
                 name="About"
                 component={AboutScreen}
@@ -89,7 +108,4 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
     },
-    navigator: {
-        backgroundColor: 'tomato'
-    }
 });
