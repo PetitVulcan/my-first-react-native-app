@@ -8,31 +8,32 @@ import Home from './components/Home';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import style from './Style'
 
 function HomeScreen() {
     return (
-        <View style={styles.container}>
+        <View style={style.container}>
             <Home />
         </View>
     );
 }
 function AboutScreen() {
     return (
-        <View style={styles.container}>
+        <View style={style.container}>
             <About />
         </View>
     );
 }
 function MeteoScreen() {
     return (
-        <View style={styles.container}>
+        <View style={style.container}>
             <Meteo />
         </View>
     );
 }
 function SearchScreen() {
     return (
-        <View style={styles.container}>
+        <View style={style.container}>
             <Search />
         </View>
     );
@@ -99,13 +100,4 @@ export default function App() {
         </NavigationContainer>
 
     );
-}
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-    },
-});
+};

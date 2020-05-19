@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, TextInput, StyleSheet } from 'react-native'
-
+import style from '../Style'
 
 export default class Search extends React.Component {
 
@@ -20,27 +20,11 @@ export default class Search extends React.Component {
         return (
             <View>
                 <TextInput
-                    style={styles.textInput}
+                    style={style.textInput}
                     value={this.state.city}
                     onChangeText={text => this.setCity(text)}
                 />
             </View>
         );
     }    
-}
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-    },
-    textInput: {
-        height: 40,
-        width: 200,
-        borderColor: 'red',
-        borderWidth: 1,
-        paddingHorizontal:20,
-    }
-});
+};
