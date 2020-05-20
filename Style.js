@@ -5,26 +5,36 @@ export default StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#F5FCFF',
+        marginHorizontal:20,
+    },
+    search: {
+        marginTop:40,
+        marginHorizontal:20,
     },
     button:{
-        color:'#EB6123'
+        color:'#EB6123',
     },
     welcome: {
         fontSize: 20,
         textAlign: 'center',
-        margin: 10,
+        margin: 15,
     },
     instructions: {
         textAlign: 'center',
         color: '#333333',
-        marginBottom: 5,
+        marginBottom: 10,
     },
     textInput: {
-        height: 40,
-        width: 200,
-        borderColor: 'red',
+        height: 40,borderColor: 'red',
         borderWidth: 1,
         paddingHorizontal:20,
-    }
+        marginBottom:20,
+    },
+    tinyLogo: {
+        width: 300,
+    },
+    centerImg: {
+        justifyContent: 'center',  
+        alignItems: 'center',      
+    }    
 })

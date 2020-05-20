@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { View } from 'react-native';
 import About from './components/About';
 import Meteo from './components/Meteo';
 import Search from './components/Search';
@@ -33,7 +33,7 @@ function MeteoScreen() {
 }
 function SearchScreen() {
     return (
-        <View style={style.container}>
+        <View>
             <Search />
         </View>
     );
